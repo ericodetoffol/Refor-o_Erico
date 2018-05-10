@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonaLaura.Apresentacao", "DonaLaura.Apresentacao\DonaLaura.Apresentacao.csproj", "{29BF159E-D9F1-4FFB-BF7B-ACAC15805374}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Apresentacao", "1.Apresentacao", "{274B66C8-1624-4B5B-AEE7-32D4626F0686}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Aplicacao", "2.Aplicacao", "{52296B34-7100-41B9-81A2-C3BC547C7B7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Dominio", "3.Dominio", "{0BE9E688-7F2C-4238-A31D-8DE98D488AE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Infraestrutura", "4.Infraestrutura", "{CAEB6D5F-2B97-4709-BFE4-7FBA1FE7502F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Testes", "6.Testes", "{7E51409A-DDB0-4A56-8000-FBFCB7485F8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Banco", "5.Banco", "{8636421D-D9C1-461B-9413-604BCBFBBE15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonaLaura.Aplicacao", "DonaLaura.Aplicacao\DonaLaura.Aplicacao.csproj", "{837EB7DB-0D5E-4498-B0F5-AEEA5F150E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonaLaura.Dominio", "DonaLaura.Dominio\DonaLaura.Dominio.csproj", "{92B73251-6B2B-4C17-933E-428EFEEF372A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonaLaura.Infra", "DonaLaura.Infra\DonaLaura.Infra.csproj", "{A5B427B1-4C47-4054-B9C6-B76CA3F08CDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonaLaura.infra.data", "DonaLaura.infra.data\DonaLaura.infra.data.csproj", "{A84F8419-3836-47F0-909F-2AAFC3C8C9F4}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DonaLaura.DB", "DonaLaura.DB\DonaLaura.DB.sqlproj", "{C4BC0FB6-A332-473C-8138-6BD8A783DAC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonaLaura.Testes", "DonaLaura.Testes\DonaLaura.Testes.csproj", "{E27EF048-0927-45A0-A2C4-A379C3BDC096}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29BF159E-D9F1-4FFB-BF7B-ACAC15805374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BF159E-D9F1-4FFB-BF7B-ACAC15805374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BF159E-D9F1-4FFB-BF7B-ACAC15805374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BF159E-D9F1-4FFB-BF7B-ACAC15805374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{837EB7DB-0D5E-4498-B0F5-AEEA5F150E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837EB7DB-0D5E-4498-B0F5-AEEA5F150E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837EB7DB-0D5E-4498-B0F5-AEEA5F150E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837EB7DB-0D5E-4498-B0F5-AEEA5F150E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B73251-6B2B-4C17-933E-428EFEEF372A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B73251-6B2B-4C17-933E-428EFEEF372A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B73251-6B2B-4C17-933E-428EFEEF372A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B73251-6B2B-4C17-933E-428EFEEF372A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B427B1-4C47-4054-B9C6-B76CA3F08CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B427B1-4C47-4054-B9C6-B76CA3F08CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B427B1-4C47-4054-B9C6-B76CA3F08CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B427B1-4C47-4054-B9C6-B76CA3F08CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A84F8419-3836-47F0-909F-2AAFC3C8C9F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84F8419-3836-47F0-909F-2AAFC3C8C9F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84F8419-3836-47F0-909F-2AAFC3C8C9F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84F8419-3836-47F0-909F-2AAFC3C8C9F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4BC0FB6-A332-473C-8138-6BD8A783DAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4BC0FB6-A332-473C-8138-6BD8A783DAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4BC0FB6-A332-473C-8138-6BD8A783DAC5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C4BC0FB6-A332-473C-8138-6BD8A783DAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4BC0FB6-A332-473C-8138-6BD8A783DAC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4BC0FB6-A332-473C-8138-6BD8A783DAC5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E27EF048-0927-45A0-A2C4-A379C3BDC096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E27EF048-0927-45A0-A2C4-A379C3BDC096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E27EF048-0927-45A0-A2C4-A379C3BDC096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E27EF048-0927-45A0-A2C4-A379C3BDC096}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29BF159E-D9F1-4FFB-BF7B-ACAC15805374} = {274B66C8-1624-4B5B-AEE7-32D4626F0686}
+		{837EB7DB-0D5E-4498-B0F5-AEEA5F150E0F} = {52296B34-7100-41B9-81A2-C3BC547C7B7C}
+		{92B73251-6B2B-4C17-933E-428EFEEF372A} = {0BE9E688-7F2C-4238-A31D-8DE98D488AE0}
+		{A5B427B1-4C47-4054-B9C6-B76CA3F08CDF} = {CAEB6D5F-2B97-4709-BFE4-7FBA1FE7502F}
+		{A84F8419-3836-47F0-909F-2AAFC3C8C9F4} = {CAEB6D5F-2B97-4709-BFE4-7FBA1FE7502F}
+		{C4BC0FB6-A332-473C-8138-6BD8A783DAC5} = {8636421D-D9C1-461B-9413-604BCBFBBE15}
+		{E27EF048-0927-45A0-A2C4-A379C3BDC096} = {7E51409A-DDB0-4A56-8000-FBFCB7485F8D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF0E204D-9082-403E-9ADD-336AED39F9F0}
+	EndGlobalSection
+EndGlobal
