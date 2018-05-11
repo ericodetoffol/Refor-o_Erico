@@ -40,7 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProdutoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DonaLaura.Dominio\DonaLaura.Dominio.csproj">
+      <Project>{92b73251-6b2b-4c17-933e-428efeef372a}</Project>
+      <Name>DonaLaura.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DonaLaura.infra.data\DonaLaura.infra.data.csproj">
+      <Project>{a84f8419-3836-47f0-909f-2aafc3c8c9f4}</Project>
+      <Name>DonaLaura.infra.data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

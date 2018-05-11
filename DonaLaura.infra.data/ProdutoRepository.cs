@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DonaLaura.infra.data
 {
-    class ProdutoRepository : IProdutoRepository
+    public class ProdutoRepository : IProdutoRepository
     {
         #region QUERYS
 
