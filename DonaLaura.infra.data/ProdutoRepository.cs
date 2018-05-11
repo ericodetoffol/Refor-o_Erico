@@ -154,7 +154,7 @@ namespace DonaLaura.infra.data
         private static Func<IDataReader, Venda> ConverterProduto = reader =>
           new Venda
           {
-              VendaNome = Convert.ToString(reader["VENDANOME"])
+              NomeProduto = Convert.ToString(reader["VENDANOME"])
           };
 
         private static Func<IDataReader, Produto> Converter = reader =>

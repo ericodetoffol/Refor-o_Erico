@@ -9,7 +9,9 @@ namespace DonaLaura.Dominio.Funcionalidade.Vendas
 {
     public class Venda : Entidade
     {
-        public string VendaNome {get; set;}
+        public string NomeProduto {get; set; }
+        public string NomeCliente {get; set; }
+        public int Quantidade {get; set; }
         public override void Valida()
         {
             throw new NotImplementedException();
