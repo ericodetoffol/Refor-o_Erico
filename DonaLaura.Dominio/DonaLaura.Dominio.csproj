@@ -40,12 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Entidade.cs" />
+    <Compile Include="Base\IRepository.cs" />
+    <Compile Include="Excecoes\DependenciaException.cs" />
+    <Compile Include="Excecoes\DescricaoDuplicadaException.cs" />
+    <Compile Include="Excecoes\NomeDuplicadoException.cs" />
+    <Compile Include="Funcionalidade\Produtos\IProdutoRepository.cs" />
+    <Compile Include="Funcionalidade\Produtos\Produto.cs" />
+    <Compile Include="Funcionalidade\Vendas\IVendaRepository.cs" />
+    <Compile Include="Funcionalidade\Vendas\Venda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base\" />
-    <Folder Include="Excecoes\" />
-    <Folder Include="Funcionalidade\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
