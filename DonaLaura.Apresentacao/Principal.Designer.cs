@@ -38,7 +38,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.smiCadstro = new System.Windows.Forms.ToolStripMenuItem();
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             this.labelTipoCadastro});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(235, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(204, 25);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -124,7 +124,7 @@
             // 
             this.smiCadstro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.produtoToolStripMenuItem,
-            this.vendaToolStripMenuItem});
+            this.toolStripMenuItem2});
             this.smiCadstro.Name = "smiCadstro";
             this.smiCadstro.Size = new System.Drawing.Size(71, 20);
             this.smiCadstro.Text = "Cadastros";
@@ -132,15 +132,16 @@
             // produtoToolStripMenuItem
             // 
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtoToolStripMenuItem.Text = "Produto";
             this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
             // 
-            // vendaToolStripMenuItem
+            // toolStripMenuItem2
             // 
-            this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.vendaToolStripMenuItem.Text = "Venda";
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "Venda";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // Principal
             // 
@@ -175,7 +176,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem smiCadstro;
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 

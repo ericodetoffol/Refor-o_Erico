@@ -151,11 +151,11 @@ namespace DonaLaura.infra.data
             return Db.GetAll(SqlSelecionaTodasProduto, Converter);
         }
 
-        private static Func<IDataReader, Venda> ConverterProduto = reader =>
-          new Venda
-          {
-              NomeProduto = Convert.ToString(reader["VENDANOME"])
-          };
+        private static Func<IDataReader, Produto> ConverterProduto = reader =>
+            new Produto
+            {
+                Nome = Convert.ToString(reader["NOME"])
+            };
 
         private static Func<IDataReader, Produto> Converter = reader =>
           new Produto

@@ -1,7 +1,9 @@
 ﻿using DonaLaura.Aplicacao;
 using DonaLaura.Apresentacao.Funcionalidades;
 using DonaLaura.Apresentacao.Funcionalidades.ProdutoModulo;
+using DonaLaura.Apresentacao.Funcionalidades.VendaModulo;
 using DonaLaura.Dominio.Funcionalidade.Produtos;
+using DonaLaura.Dominio.Funcionalidade.Vendas;
 using DonaLaura.infra.data;
 using System;
 using System.Collections.Generic;
@@ -17,14 +19,14 @@ namespace DonaLaura.Apresentacao
 {
     public partial class Principal : Form
     {
-        //private static IEditoraRepository _editoraRepository = new EditoraRepository();
+        private static IVendaRepository _vendaRepository = new VendaRepository();
         private static IProdutoRepository _produtoRepository = new ProdutoRepository();
 
-        //private EditoraService _editoraService = new EditoraService(_editoraRepository);
+        private VendaService _vendaService = new VendaService(_vendaRepository);
         private ProdutoService _produtoService = new ProdutoService(_produtoRepository);
         private GerenciadorFormulario _gerenciador;
 
-        //private EditoraGerenciadorFormulario _editoraGerenciador;
+        private VendaGerenciadorFormulario _vendaGerenciador;
         private ProdutoGerenciadorFormulario _produtoGerenciador;
 
         public Principal()
@@ -33,17 +35,20 @@ namespace DonaLaura.Apresentacao
             WindowState = FormWindowState.Maximized;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             _produtoGerenciador = new ProdutoGerenciadorFormulario(_produtoService);
+            _vendaGerenciador = new VendaGerenciadorFormulario(_vendaService, _produtoService);
         }
 
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CarregarCadastro(_produtoGerenciador);
+            
         }
 
-        //private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    CarregarCadastro(_editoraGerenciador);
-        //}
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CarregarCadastro(_vendaGerenciador);
+            
+        }
 
         private void CarregarCadastro(GerenciadorFormulario gerenciador)
         {
@@ -99,5 +104,7 @@ namespace DonaLaura.Apresentacao
         {
             _gerenciador.Excluir();
         }
+
+        
     }
 }
