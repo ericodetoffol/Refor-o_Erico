@@ -19,23 +19,12 @@ namespace DonaLaura.Apresentacao.Funcionalidades.VendaModulo
         private Venda _venda;
         private IList<Produto> _produtos;
 
-        public CadastroVendaDialog(Venda vendaSelecionada, IList<Produto> produtos)
+
+        public CadastroVendaDialog(ProdutoService servico)
         {
             InitializeComponent();
 
-            AtualizaCombobox(produtos);
-
-            Venda = vendaSelecionada;
-        }
-
-        public CadastroVendaDialog(IList<Produto> produtos)
-        {
-            InitializeComponent();
-
-            if (produtos == null || produtos.Count == 0)
-                throw new ArgumentNullException("Deve ter produtos cadastrados");
-
-            AtualizaCombobox(produtos);
+            AtualizaCombobox(servico.SelecionaTodas());
         }
 
         public Venda Venda
@@ -44,7 +33,7 @@ namespace DonaLaura.Apresentacao.Funcionalidades.VendaModulo
             set
             {
                 _venda = value;
-                cbxNomeProduto.SelectedItem = _venda.NomeProduto;
+                cbxNomeProduto.SelectedItem = _venda.Produto.Id;
                 txtNomeCliente.Text = _venda.NomeCliente;
                 nudQuantidade.Text = _venda.Quantidade.ToString();
                 //labelLucro.Text = _venda.Lucro.ToString();
@@ -57,7 +46,7 @@ namespace DonaLaura.Apresentacao.Funcionalidades.VendaModulo
             {
                 _venda = new Venda();
             }
-            _venda.NomeProduto = cbxNomeProduto.SelectedItem as Produto;
+            _venda.Produto = cbxNomeProduto.SelectedItem as Produto;
             _venda.NomeCliente = txtNomeCliente.Text;
             _venda.Quantidade = Convert.ToInt32(nudQuantidade.Text);
             //_venda.Lucro = Convert.ToDecimal(labelLucro.Text);

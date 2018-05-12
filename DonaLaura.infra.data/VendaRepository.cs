@@ -16,17 +16,15 @@ namespace DonaLaura.infra.data
 
         private const string SqlInsereVenda =
             @"INSERT INTO TBVENDA
-                (NomeProduto, NomeCliente, Quantidade, Lucro)
+                (NomeCliente, Quantidade)
             VALUES
-                ({0}NomeProduto, {0}NomeCliente, {0}Quantidade, {0}Lucro)";
+                ({0}NomeCliente, {0}Quantidade)";
 
         private const string SqlEditaVenda =
             @"UPDATE TBVENDA
                 SET
-                    NOMEPRODUTO = {0}NOMEPRODUTO,
                     NOMECLIENTE = {0}NOMECLIENTE,
                     QUANTIDADE = {0}QUANTIDADE,
-                    LUCRO = {0}LUCRO
                 WHERE ID = {0}ID";
 
         private const string SqlDeletaVenda =
@@ -34,39 +32,50 @@ namespace DonaLaura.infra.data
                 WHERE ID = {0}ID";
 
         private const string SqlSelecionaTodasVenda =
-           @"SELECT * FROM TBVENDA";
+        @"SELECT
+                V.ID,
+                V.NOMECLIENTE,
+                V.QUANTIDADE,
+                V.PRODUTOID,
+				P.NOME AS NOMEPRODUTO
+
+            FROM
+                TBVENDA AS V
+				INNER JOIN
+				TBPRODUTO AS P ON P.ID = V.PRODUTOID";
 
         private const string SqlSelecionaVendaPorId =
-           @"SELECT
-                ID,
-                NOMEPRODUTO,
-                NOMECLIENTE,
-                QUANTIDADE,
-                LUCRO
+            @"SELECT
+                V.ID,
+                V.NOMECLIENTE,
+                V.QUANTIDADE,
+                V.PRODUTOID,
+			    P.NOME AS NOMEPRODUTO
+
             FROM
-                TBVENDA
-            WHERE ID = {0}ID";
+                TBVENDA AS V
+				INNER JOIN
+				TBPRODUTO AS P ON P.ID = V.PRODUTOID
+            WHERE V.ID = {0}ID";
 
         private const string SqlSelecionaVendaPorNome =
            @"SELECT
-                ID,
-                NOMEPRODUTO,
-                NOMECLIENTE,
-                QUANTIDADE,
-                LUCRO
+                V.ID,
+                V.NOMECLIENTE,
+                V.QUANTIDADE,
+                V.PRODUTOID,
+				P.NOME AS NOMEPRODUTO
+
             FROM
-                TBVENDA
-            WHERE NOMEPRODUTO = {0}NOMEPRODUTO,
-                  NOMECLIENTE = {0}NOMECLIENTE,
-                  QUANTIDADE = {0}QUANTIDADE,
-                  LUCRO = {0}LUCRO";
+                TBVENDA AS V
+				INNER JOIN
+				TBPRODUTO AS P ON P.ID = V.PRODUTOID
+            WHERE V.NOMECLIENTE = {0}NOMECLIENTE";
 
         private const string SqlVerificaDependencia =
            @"SELECT
-                NOMEPRODUTO,
                 NOMECLIENTE,
-                QUANTIDADE,
-                LUCRO
+                QUANTIDADE
             FROM
                 TBVENDA
             WHERE PRODUTOID = {0}ID_VENDA
@@ -126,11 +135,10 @@ namespace DonaLaura.infra.data
         private static Func<IDataReader, Venda> Converter = reader =>
           new Venda
           {
-              Id = Convert.ToInt32(reader["Id"]),              
-              NomeProduto = new Produto
+              Id = Convert.ToInt32(reader["ID"]),
+              Produto = new Produto
               {
-                  Id = Convert.ToInt32(reader["NOMEID"]),
-                  Nome = Convert.ToString(reader["NOMEPRODUTO"]),
+                  Id = Convert.ToInt32(reader["PRODUTOID"]),
               },
               NomeCliente = Convert.ToString(reader["NomeCliente"]),
               Quantidade = Convert.ToInt32(reader["Quantidade"]),
@@ -143,8 +151,7 @@ namespace DonaLaura.infra.data
             return new Dictionary<string, object>
             {
                 { "Id", venda.Id },
-                { "NomeProduto", venda.NomeProduto },
-                { "PRODUTOID", venda.NomeProduto.Id },
+                { "ProdutoId", venda.Produto.Id },
                 { "NomeCliente", venda.NomeCliente},
                 { "Quantidade", venda.Quantidade },
                // { "Lucro", venda.Lucro },

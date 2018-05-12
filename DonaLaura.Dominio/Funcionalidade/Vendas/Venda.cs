@@ -10,7 +10,7 @@ namespace DonaLaura.Dominio.Funcionalidade.Vendas
 {
     public class Venda : Entidade
     {
-        public Produto NomeProduto {get; set; }
+        public Produto Produto { get; set; }
         public string NomeCliente {get; set; }
         public int Quantidade {get; set; }
         //public decimal Lucro { get; set; }
@@ -27,7 +27,7 @@ namespace DonaLaura.Dominio.Funcionalidade.Vendas
 
         public override string ToString()
         {
-            return String.Format("{0} - {1} - {2} - {3}", Id, NomeProduto.Nome, NomeCliente, Quantidade);
+            return String.Format("{0} - {1} - {2}", Id, NomeCliente, Quantidade);
         }
     }
 }

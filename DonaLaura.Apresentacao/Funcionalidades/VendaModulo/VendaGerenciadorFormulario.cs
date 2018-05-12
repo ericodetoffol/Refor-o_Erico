@@ -28,7 +28,7 @@ namespace DonaLaura.Apresentacao.Funcionalidades.VendaModulo
         {
             AtualizaComboBox();
 
-            CadastroVendaDialog dialog = new CadastroVendaDialog(_produtos);
+            CadastroVendaDialog dialog = new CadastroVendaDialog(_produtoService);
             DialogResult resultado = dialog.ShowDialog();
 
             if (resultado == DialogResult.OK)
@@ -65,7 +65,7 @@ namespace DonaLaura.Apresentacao.Funcionalidades.VendaModulo
 
             if (vendaSelecionada != null)
             {
-                CadastroVendaDialog dialog = new CadastroVendaDialog(vendaSelecionada, _produtos);
+                CadastroVendaDialog dialog = new CadastroVendaDialog(_produtoService);
                 DialogResult resultado = dialog.ShowDialog();
 
                 if (resultado == DialogResult.OK)
