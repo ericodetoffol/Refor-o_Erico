@@ -16,15 +16,16 @@ namespace DonaLaura.infra.data
 
         private const string SqlInsereVenda =
             @"INSERT INTO TBVENDA
-                (NomeCliente, Quantidade)
+                (NomeCliente, Quantidade ,ProdutoId)
             VALUES
-                ({0}NomeCliente, {0}Quantidade)";
+                ({0}NomeCliente, {0}Quantidade, {0}ProdutoId)";
 
         private const string SqlEditaVenda =
             @"UPDATE TBVENDA
                 SET
                     NOMECLIENTE = {0}NOMECLIENTE,
                     QUANTIDADE = {0}QUANTIDADE,
+                    PRODUTOID = {0}PRODUTOID
                 WHERE ID = {0}ID";
 
         private const string SqlDeletaVenda =
@@ -36,8 +37,7 @@ namespace DonaLaura.infra.data
                 V.ID,
                 V.NOMECLIENTE,
                 V.QUANTIDADE,
-                V.PRODUTOID,
-				P.NOME AS NOMEPRODUTO
+                V.PRODUTOID
 
             FROM
                 TBVENDA AS V
@@ -49,8 +49,7 @@ namespace DonaLaura.infra.data
                 V.ID,
                 V.NOMECLIENTE,
                 V.QUANTIDADE,
-                V.PRODUTOID,
-			    P.NOME AS NOMEPRODUTO
+                V.PRODUTOID
 
             FROM
                 TBVENDA AS V
@@ -63,8 +62,7 @@ namespace DonaLaura.infra.data
                 V.ID,
                 V.NOMECLIENTE,
                 V.QUANTIDADE,
-                V.PRODUTOID,
-				P.NOME AS NOMEPRODUTO
+                V.PRODUTOID
 
             FROM
                 TBVENDA AS V
@@ -75,7 +73,8 @@ namespace DonaLaura.infra.data
         private const string SqlVerificaDependencia =
            @"SELECT
                 NOMECLIENTE,
-                QUANTIDADE
+                QUANTIDADE,
+                PRODUTOID
             FROM
                 TBVENDA
             WHERE PRODUTOID = {0}ID_VENDA

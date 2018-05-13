@@ -15,6 +15,7 @@ namespace DonaLaura.Dominio.Funcionalidade.Produtos
         public int Estoque { get; set; }
         public DateTime DataFabricacao { get; set; }
         public DateTime DataValidade { get; set; }
+        public long id { get; set; }
 
         public override void Valida()
         {

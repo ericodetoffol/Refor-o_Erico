@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5B427B1-4C47-4054-B9C6-B76CA3F08CDF}</ProjectGuid>
+    <ProjectGuid>{98545818-BB08-4668-9332-3757FC26FAF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DonaLaura.Infra</RootNamespace>
-    <AssemblyName>DonaLaura.Infra</AssemblyName>
+    <RootNamespace>ClassLibrary1</RootNamespace>
+    <AssemblyName>ClassLibrary1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -47,7 +47,6 @@
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression.FileSystem" />
@@ -64,9 +63,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB.cs" />
+    <Compile Include="ObjectMother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestMethods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DonaLaura.Dominio\DonaLaura.Dominio.csproj">
+      <Project>{92b73251-6b2b-4c17-933e-428efeef372a}</Project>
+      <Name>DonaLaura.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DonaLaura.infra.data\DonaLaura.infra.data.csproj">
+      <Project>{a84f8419-3836-47f0-909f-2aafc3c8c9f4}</Project>
+      <Name>DonaLaura.infra.data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DonaLaura.Infra\DonaLaura.Infra.csproj">
+      <Project>{a5b427b1-4c47-4054-b9c6-b76ca3f08cdf}</Project>
+      <Name>DonaLaura.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
