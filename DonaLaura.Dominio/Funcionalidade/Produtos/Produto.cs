@@ -21,11 +21,11 @@ namespace DonaLaura.Dominio.Funcionalidade.Produtos
         {
             if (string.IsNullOrEmpty(Nome))
                 throw new InvalidOperationException("O Nome é obrigatório.");
-            if (PrecoVenda == null)
+            if (PrecoVenda == 0)
                 throw new InvalidOperationException("O Preço de Venda é obrigatório.");
-            if (PrecoCusto == null)
+            if (PrecoCusto == 0)
                 throw new InvalidOperationException("O Preço de Custo é obrigatório.");
-            if (Estoque == null)
+            if (Estoque == 0)
                 throw new InvalidOperationException("O Estoque é obrigatório.");
             if (Nome.Length < 4)
                 throw new InvalidOperationException("O Nome do Produto deve ser maior que 4 caracteres!");
@@ -33,7 +33,10 @@ namespace DonaLaura.Dominio.Funcionalidade.Produtos
                 throw new InvalidOperationException("O Preço de Custo deve ser menor que o Preço de Venda!");
            if (Estoque == 0)
                 throw new InvalidOperationException("Oproduto não tem em estoque!");
-
+            if (string.IsNullOrEmpty(Nome))
+                throw new EmptyMessageException();
+            if (Nome.Length < 4)
+                throw new MinChar4Exception();
         }
 
         public override string ToString()

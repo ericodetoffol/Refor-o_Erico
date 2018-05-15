@@ -151,6 +151,16 @@ namespace DonaLaura.infra.data
             return Db.GetAll(SqlSelecionaTodasProduto, Converter);
         }
 
+        public Produto Get(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Produto> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         private static Func<IDataReader, Produto> ConverterProduto = reader =>
             new Produto
             {

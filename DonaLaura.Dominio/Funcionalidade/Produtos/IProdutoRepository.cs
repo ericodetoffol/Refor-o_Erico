@@ -10,5 +10,7 @@ namespace DonaLaura.Dominio.Funcionalidade.Produtos
     public interface IProdutoRepository : IRepository<Produto>
     {
         bool Existe(string enunciado);
+        Produto Get(long id);
+        IEnumerable<Produto> GetAll();
     }
 }
